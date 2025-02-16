@@ -838,7 +838,7 @@ class _ScrollOnExpandState extends State<ScrollOnExpand> {
   _animationComplete() {
     _isAnimating--;
     if (_isAnimating == 0 && _lastContext != null && mounted) {
-      if ((_controller?.expanded ?? true && widget.scrollOnExpand) ||
+      if (((_controller?.expanded ?? true) && widget.scrollOnExpand) ||
           (!(_controller?.expanded ?? true) && widget.scrollOnCollapse)) {
         _lastContext
             ?.findRenderObject()
